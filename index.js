@@ -29,7 +29,7 @@ let chart;
 
 
 async function fetchCountries() {
-    const response = await fetch('http://api.allorigins.win/raw?url=https://restcountries.herokuapp.com/api/v1');
+    const response = await fetch('https://api.allorigins.win/raw?url=https://restcountries.herokuapp.com/api/v1');
     const data = await response.json();
     data.forEach(e => {
         contries[e.cca2] = { name: e.name.common, region: e.region, subregion: e.subregion, };
